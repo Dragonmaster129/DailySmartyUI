@@ -1,3 +1,19 @@
 .post-topic {
   margin: 0 4px;
 }
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.home {
+  height: 100vh;
+  display: grid;
+  align-content: space-around;
+  justify-items: center;
+}
+
+.recent-posts-posts {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
