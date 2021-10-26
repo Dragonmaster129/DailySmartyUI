@@ -20,11 +20,12 @@ li {
   width: 66vw;
   display: grid;
   align-content: space-around;
-  justify-items: center;
+  justify-items: stretch;
   grid-template-rows: 1fr 2fr 1fr;
 }
 
-.logo-main {
+.logo-main,
+.recent-posts {
   display: grid;
   justify-content: center;
   align-items: center;
