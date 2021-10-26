@@ -6,14 +6,26 @@ body {
   font-family: "Lato", sans-serif;
 }
 
-.home {
-  height: 100vh;
-  display: grid;
-  align-content: space-around;
-  justify-items: center;
+li {
+  list-style-type: none;
 }
 
-.recent-posts-posts {
+.app-wrapper {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+
+  .home {
+    height: 98vh;
+    width: 66vw;
+    display: grid;
+    align-content: space-around;
+    justify-items: center;
+    // grid-template-rows: 1fr 2fr 1fr;
+  }
+
+  .recent-posts-posts {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+  }
 }
