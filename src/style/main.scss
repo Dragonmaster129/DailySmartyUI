@@ -13,19 +13,30 @@ li {
 .app-wrapper {
   display: grid;
   justify-items: center;
-
-  .home {
-    height: 98vh;
-    width: 66vw;
-    display: grid;
-    align-content: space-around;
-    justify-items: center;
-    // grid-template-rows: 1fr 2fr 1fr;
-  }
-
-  .recent-posts-posts {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 30px;
-  }
 }
+
+.home {
+  height: 98vh;
+  width: 66vw;
+  display: grid;
+  align-content: space-around;
+  justify-items: center;
+  grid-template-rows: 1fr 2fr 1fr;
+}
+
+.logo-main {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.recent-posts-posts {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+}
+
+$color-gray-one: #666666;
+$color-gray-two: #b3b3b3;
+
+@import "./searchBar.scss";
