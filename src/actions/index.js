@@ -5,7 +5,7 @@ import axios from "axios";
 export function fetchRecentPosts() {
   return function (dispatch) {
     axios
-      .get("https://api.dailysmarty.com/posts")
+      .get("https://api.dailysmarty.com/posts", { mode: "no-cors" })
       .then((response) => {
         dispatch({
           type: SET_RECENT_POSTS,
@@ -14,6 +14,11 @@ export function fetchRecentPosts() {
       })
       .catch((error) => {
         console.log(error);
+        const ddefault = fetch("../../dailysmarty.response.json");
+        dispatch({
+          type: SET_RECENT_POSTS,
+          payload: ddefault.posts,
+        });
       });
   };
 }
@@ -33,6 +38,11 @@ export function fetchPostsWithQuery(query, callback) {
       })
       .catch((error) => {
         console.log(error);
+        const ddefault = fetch("../../dailysmarty.response.json");
+        dispatch({
+          type: SET_RESULTS_POSTS,
+          payload: ddefault.data.posts,
+        });
       });
   };
 }

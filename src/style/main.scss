@@ -6,10 +6,6 @@ body {
   font-family: "Lato", sans-serif;
 }
 
-li {
-  list-style-type: none;
-}
-
 .app-wrapper {
   display: grid;
   justify-items: center;
@@ -31,13 +27,15 @@ li {
   align-items: center;
 }
 
-.recent-posts-posts {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 30px;
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
 
 $color-gray-one: #666666;
 $color-gray-two: #b3b3b3;
+$color-blue-main: #0079ff;
 
 @import "./searchBar.scss";
+@import "./recent-posts.scss";
