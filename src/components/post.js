@@ -23,13 +23,35 @@ export default class Post extends Component {
     return topics;
   }
 
+  getNameForPostLink(str) {
+    let n = str.lastIndexOf("/");
+    let link = str.substring(n + 1, str.length);
+
+    if (n + 1 == str.length) {
+      link = str.slice(0, n);
+      n = link.lastIndexOf("/");
+
+      link = link.substring(n + 1, link.length);
+    }
+
+    if (link.includes(".html")) {
+      link = link.substring(0, link.length - 5);
+    }
+
+    if (link.includes(".htm")) {
+      link = link.substring(0, link.length - 4);
+    }
+
+    return link;
+  }
+
   renderLinks() {
     let links = this.props.post_links.map((link, index) => {
       return (
         <div className="post-link" key={index}>
           <div className="post-link-box"></div>
           <div className="post-link-link">
-            <a href={link.link_url}>Useful Link #{index + 1}</a>
+            <a href={link.link_url}>{this.getNameForPostLink(link.link_url)}</a>
           </div>
         </div>
       );
