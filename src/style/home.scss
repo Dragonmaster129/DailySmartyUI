@@ -1,0 +1,5 @@
+.home {
+  @include default-page-layout();
+  justify-items: stretch;
+  grid-template-rows: 1fr 2fr 1fr;
+}

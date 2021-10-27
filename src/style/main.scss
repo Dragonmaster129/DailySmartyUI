@@ -11,15 +11,6 @@ body {
   justify-items: center;
 }
 
-.home {
-  height: 98vh;
-  width: 66vw;
-  display: grid;
-  align-content: space-around;
-  justify-items: stretch;
-  grid-template-rows: 1fr 2fr 1fr;
-}
-
 .logo-main,
 .recent-posts {
   display: grid;
@@ -37,5 +28,8 @@ $color-gray-one: #666666;
 $color-gray-two: #b3b3b3;
 $color-blue-main: #0079ff;
 
+@import "./mixins.scss";
 @import "./searchBar.scss";
 @import "./recent-posts.scss";
+@import "./home.scss";
+@import "./results.scss";
