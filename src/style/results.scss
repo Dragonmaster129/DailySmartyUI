@@ -1,7 +1,8 @@
 .results {
   @include default-page-layout();
+  margin-top: 50px;
   align-content: start;
-  gap: 30px;
+  row-gap: 44px;
 
   .search-bar {
     align-content: start;
@@ -9,6 +10,38 @@
     input {
       font-size: 22px;
       height: 36px;
+    }
+  }
+
+  .results-posts {
+    .results-posts-wrapper {
+      .results-posts-posts {
+        display: grid;
+        row-gap: 20px;
+        justify-content: stretch;
+
+        .result-post {
+          display: grid;
+          align-content: space-around;
+          row-gap: 22px;
+
+          .result-post-topics > * {
+            color: $color-blue-main;
+            font-size: 14px;
+            line-height: 17px;
+            font-weight: normal;
+          }
+
+          .result-post-title a {
+            color: $color-gray-one;
+            font-size: 18px;
+            line-height: 22px;
+          }
+
+          .result-post-links {
+          }
+        }
+      }
     }
   }
 }
